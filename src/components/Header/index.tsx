@@ -1,6 +1,9 @@
 import { Flex, Box, Heading, Spacer, Button } from "@chakra-ui/react";
+import { useReactAuth } from "../../hooks/AuthContext";
 
 export const Header = () => {
+  const { signOut } = useReactAuth();
+
   return (
     <Flex
       justify="center"
@@ -20,7 +23,7 @@ export const Header = () => {
       </Box>
       <Spacer />
       <Box>
-        <Button colorScheme="red" mr="4" size="sm">
+        <Button colorScheme="red" mr="4" size="sm" onClick={signOut}>
           Sair
         </Button>
       </Box>
