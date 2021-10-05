@@ -4,7 +4,7 @@ import { Login } from "../pages/Login";
 export const PublicRoutes = () => {
   return (
     <Switch>
-      <Route path="/login" component={Login} />
+      <Route exact path="/" component={Login} />
     </Switch>
   );
 };
