@@ -6,8 +6,6 @@ import { PublicRoutes } from "./public.routes";
 export const Routes = () => {
   const { isSigned } = useReactAuth();
 
-  console.log(isSigned);
-
   return isSigned ? (
     <>
       <AppLayout>
